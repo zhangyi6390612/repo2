@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itheima</groupId>
+    <artifactId>maven_advanced</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>maven_dao</module>
+        <module>maven_service</module>
+        <module>maven_web</module>
+    </modules>
+
+    <!--锁jar包版本信息-->
+    <properties>
+        <spring-context>5.0.5.RELEASE</spring-context>
+        <spring-web>5.0.5.RELEASE</spring-web>
+        <spring-webmvc>5.0.5.RELEASE</spring-webmvc>
+        <spring-tx>5.0.5.RELEASE</spring-tx>
+        <spring-jdbc>5.0.5.RELEASE</spring-jdbc>
+        <spring-aop>5.0.5.RELEASE</spring-aop>
+        <aspectjweaver>1.8.13</aspectjweaver>
+        <mybaits>3.4.5</mybaits>
+        <mybatis-spring>1.3.1</mybatis-spring>
+        <druid>1.0.29</druid>
+        <mysql-connector-java>5.1.46</mysql-connector-java>
+        <junit>4.12</junit>
+        <log4j>1.2.17</log4j>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring一类jar包-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-context}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-web}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-webmvc}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-aop}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-tx}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-jdbc}</version>
+            </dependency>
+
+            <!--mybatis一类jar包-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybaits}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring}</version>
+            </dependency>
+
+            <!--数据库相关jar包-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid}</version>
+            </dependency>
+
+            <!--测试jar包-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit}</version>
+            </dependency>
+
+            <!--日志相关jar包-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
